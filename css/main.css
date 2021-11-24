@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font_family_1);
+    overflow-x:hidden;
+    overflow-y: scroll;
+    overflow-y: overlay;
+}
+a,
+li,
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+:root {
+    --font_family_1: 'Poppins', sans-serif;
+}

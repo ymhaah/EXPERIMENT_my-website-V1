@@ -1,0 +1,218 @@
+:root {
+    /* start M sizes */
+    --header_M_hight : 70px ;
+    --header_nav_width : 50%;
+    --header_elements_hight : 40px ;
+    --header_icon_size : 24px;
+    --header_M_padding : 18px ;
+    /* End M sizes */
+    /*start M colors */
+    --header_font_color : rgb(255, 240, 229) ;
+    --header_icon_color : white;
+    /*End M colors */
+    /* start fonts */
+    --header_font_size : 1.2rem ;
+    --header_font_wight : 300 ;
+    /* End fonts */
+    /* start animations */
+    --header_pop_animation : 1s ;
+    /* End animations */
+}
+
+header {
+    width: 100vw;
+    height: var(--header_M_hight);
+    background: var(--Hero_background_color);
+    position: relative;
+}
+header .header {
+    width: 100%;
+    height: 100%;
+}
+header .container {
+    height: 100%;
+    margin: 0 auto;
+    padding-right: var(--header_M_padding);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+====================
+1-logo 
+    1.5-media queries for logo 
+2-M nav 
+3-hamburger menu 
+4-secondary nav 
+5-M media queries 
+====================
+*/
+
+/* start logo */
+header .header .M_logo {
+    height: var(--header_elements_hight);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+header .header .M_logo h1 {
+    font-family: 'Parisienne', cursive;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--header_font_color);
+}
+
+@media (max-width: 767px) {
+    header .container {
+        padding-left: var(--header_M_padding);
+    }
+    header .header .M_logo {
+        width: 50%;
+    }
+}
+/* End logo */
+
+/* start M nav */
+header .header nav  {
+    width: var(--header_nav_width);
+}
+
+header .header nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header nav ul li {
+    height: var(--header_M_hight);
+    display: flex;
+    align-items: center;
+}
+
+header .header nav ul li:hover {
+    border-bottom: 1px solid var(--header_font_color);
+}
+
+
+header .header nav ul li a {
+    font-size: var(--header_font_size);
+    color: var(--header_font_color);
+    font-weight: var(--header_font_wight);
+}
+
+/* End M nav */
+
+/*start hamburger menu */
+header .header nav .hamburger {
+    height: var(--header_icon_size);
+    width: var(--header_icon_size);
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header .header nav .hamburger span {
+    width: 100%;
+    height: 10%;
+    border-radius: 1px;
+    background-color: var(--header_icon_color);
+    display: block;
+    transition-duration: var(--header_pop_animation);
+}
+
+/*start animations */
+header .header nav .hamburger:hover span {
+    position: absolute;
+}
+
+header .header nav .hamburger:hover .span2 {
+    display: none;
+}
+
+header .header nav .hamburger:hover :first-child {
+    transform-origin: center;
+    transform: rotate(45deg);
+}
+
+header .header nav .hamburger:hover :last-child {
+    transform-origin: center;
+    transform: rotate(-45deg);
+} 
+/*End animations */
+/*End hamburger menu */
+
+/*start secondary nav */
+header .header .S_nav {
+    display: none;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: var(--header_M_color);
+}
+
+header .header .S_nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .header .S_nav ul li {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header .S_nav ul li:not(header .header .S_nav ul li:last-child) {
+    border-bottom: 2px solid white;
+}
+
+header .header .S_nav ul li a {
+    font-size: var(--header_font_size);
+    color: var(--header_font_color);
+    font-weight: var(--header_font_wight);
+}
+/* start animation - do it with js */
+
+/* End animation */
+/*End secondary nav */
+
+/*start M media queries */
+@media (max-width: 768px) {
+    /* For Tablets */
+    header .header nav {
+        width: auto;
+    }
+    header .header nav ul {
+        display: none;
+    }
+}
+@media (min-width: 769px) {
+    header .header nav .hamburger {
+        display: none;
+    }
+    header .header .S_nav {
+        display: none;
+    }
+}
+/*End M media queries */
