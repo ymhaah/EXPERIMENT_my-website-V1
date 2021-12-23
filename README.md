@@ -1,2 +1,2 @@
 # https://ymhaah.github.io/Example2_hero/
-My second attempt to create my own site
+## My second attempt to create my own site
