@@ -1,0 +1,93 @@
+::root {
+
+}
+
+article {
+    width: 100vw;
+
+}
+
+article .father {
+    width: 100%;
+    height: 100vh;
+
+}
+
+article .father .container {
+    margin: 0 auto ;
+    height: 100%;
+    height: 40%;
+
+}
+
+article .father .container .text {
+    width: 100%;
+    height: 100%;
+
+}
+
+article .father .cards {
+    width: 100%;
+    height: 60%;
+    display: flex;
+
+    align-items: center;
+    
+}
+
+article .father .cards .card {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    perspective: 1000px;
+    position: relative;
+}
+
+article .father .cards .card .c {
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    width: 20%;
+    height: 100%;
+    transform-origin: center;
+    transform: rotateY(30deg);
+    box-shadow: -20px 0px 20px 0px rgb(0 0 0 / 30%);
+}
+
+article .father .cards .card .c1 {
+    left: 0%;  
+    /* transform: rotateY(340deg); */
+} 
+article .father .cards .card .c2 {
+    left: 10%;
+    /* transform: rotateY(340deg); */
+}
+article .father .cards .card .c3 {
+    left: 20%;
+}
+article .father .cards .card .c4 {
+    left: 30%;
+}
+
+article .father .cards .card .c5 {
+    left: 40%;
+}
+
+article .father .cards .card .c6 {
+    left: 50%;
+}
+article .father .cards .card .c7 {
+    left: 60%;
+}
+article .father .cards .card .c8 {
+    left: 70%;
+}
+article .father .cards .card .c9 {
+    left: 80%;
+}
+article .father .cards .card .c10 {
+    left: 90%;
+}
+article .father .cards .card .c11 {
+    left: 100%;
+}
